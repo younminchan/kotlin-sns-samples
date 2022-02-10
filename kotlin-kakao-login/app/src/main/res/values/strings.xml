@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">kotlin-kakao-login</string>
+
+    <!-- Kakao KEY설정[AndroidManifest.xml에도 설정]-->
+    <!-- Kakao-init에서 사용 -->
+    <string name="kakao_app_key">{NATIVE_APP_KEY}}</string>
+    <!-- AndroidManifest.xml에서 사용 -->
+    <string name="kakao_app_key2">kakao{NATIVE_APP_KEY}</string>
+</resources>
