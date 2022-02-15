@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">kotlin-naver-login</string>
+
+    <string name="social_login_info_naver_client_id">ID_KEY</string>
+    <string name="social_login_info_naver_client_secret">SECREY_KEY</string>
+    <string name="social_login_info_naver_client_name">네이버아이디 로그인</string>
+</resources>
