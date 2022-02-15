@@ -14,7 +14,7 @@ import org.json.JSONObject
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
-    //네이버 로그인
+    //네이버 로그인 
     var mNaverLoginModule : OAuthLogin? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
