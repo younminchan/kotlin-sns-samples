@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">kotlin-facebook-login</string>
+    <string name="facebook_app_id">{facebook_app_id 입력}</string>
+    <string name="fb_login_protocol_scheme">{fb_login_protocol_scheme 입력}</string>
+</resources>
