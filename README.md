@@ -3,5 +3,5 @@
 
 - 카카오 로그인: https://github.com/younminchan/kotlin-sns-samples/tree/main/kotlin-kakao-login
 - 네이버 로그인: https://github.com/younminchan/kotlin-sns-samples/tree/main/kotlin-naver-login
-- 페이스북 로그인: 
+- 페이스북 로그인: https://github.com/younminchan/kotlin-sns-samples/tree/main/kotlin-facebook-login
 - 구글 로그인: 
