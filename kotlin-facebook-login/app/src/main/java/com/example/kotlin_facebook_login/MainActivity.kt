@@ -1,23 +1,18 @@
 package com.example.kotlin_facebook_login
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.example.kotlin_facebook_login.databinding.ActivityMainBinding
-import com.facebook.appevents.AppEventsLogger
-
-import com.facebook.login.LoginResult
-
-import android.R
-import android.view.View
-import com.facebook.login.LoginManager
-
-import com.facebook.login.widget.LoginButton
-import java.util.*
 import android.content.Intent
-import android.util.Log
-import com.facebook.*
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.kotlin_facebook_login.databinding.ActivityMainBinding
+import com.facebook.CallbackManager
+import com.facebook.FacebookCallback
+import com.facebook.FacebookException
+import com.facebook.GraphRequest
+import com.facebook.login.LoginManager
+import com.facebook.login.LoginResult
+import java.util.*
 
-
+/** MainActivity.kt*/
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
@@ -30,14 +25,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        //Facebook
-        callbackManager = CallbackManager.Factory.create()
+        //Facebook-Login
+        callbackManager = CallbackManager.Factory.create() //로그인 응답 처리할 CallbackManager
         loginManager = LoginManager.getInstance()
 
         binding.tvFbLogin.setOnClickListener {
             loginManager.logInWithReadPermissions(this, Arrays.asList("public_profile", "email"))
-
             loginManager.registerCallback(callbackManager, object : FacebookCallback<LoginResult?> {
                     override fun onSuccess(loginResult: LoginResult?) {
                         // App code
@@ -52,11 +45,8 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     override fun onCancel() {
-                        // App code
                     }
-
                     override fun onError(exception: FacebookException) {
-                        // App code
                         binding.tvFbResult.text = "onError: ${exception.printStackTrace()}"
                     }
                 })
@@ -64,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        callbackManager.onActivityResult(requestCode, resultCode, data)
         super.onActivityResult(requestCode, resultCode, data)
+        callbackManager.onActivityResult(requestCode, resultCode, data)
     }
 }
