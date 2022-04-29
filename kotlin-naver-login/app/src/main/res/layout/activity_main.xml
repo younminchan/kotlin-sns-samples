@@ -6,26 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_naver_login"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_login"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Naver Login"
-        android:padding="10dp"
-        android:background="#2DB400"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_naver_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2DB400"
+            android:padding="20dp"
+            android:text="Naver Login"
+            android:textColor="#FFFFFF"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_naver_logout"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_naver_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2DB400"
+            android:padding="20dp"
+            android:text="Naver Logout"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/tv_naver_login"
+            app:layout_constraintRight_toLeftOf="@+id/tv_naver_delete_token"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_naver_delete_token"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#2DB400"
+            android:padding="20dp"
+            android:text="Naver Delete Token"
+            android:textColor="#FFFFFF"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@+id/tv_naver_logout"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/tv_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/tv_naver_login"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="id, token: "
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="id, token: "/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
