@@ -8,7 +8,7 @@
 - 코드: https://github.com/younminchan/kotlin-sns-samples/tree/main/kotlin-kakao-login  
 
 ## 네이버 로그인 
-- 문서:   
+- 문서: https://minchanyoun.tistory.com/118  
 - 코드: https://github.com/younminchan/kotlin-sns-samples/tree/main/kotlin-naver-login  
 
 ## 페이스북 로그인 
